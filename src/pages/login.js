@@ -6,23 +6,12 @@ function Login ({ setIsLoggedIn }) {
 const [password, setPassword] = useState("");
 
    const login = async () => {
-  //  const res = await fetch("http://localhost:5000/api/auth/sign-in/email", {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  //   credentials: "include",
-  //   body: JSON.stringify({
-  //     email,
-  //     password,
-  //   }),
-  // })
   const res = await fetch(" https://ai-agent-backend-1-d43j.onrender.com/api/auth/sign-in/email", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
   },
-  credentials: "include",
+  // credentials: "include",
   body: JSON.stringify({
     email,
     password,

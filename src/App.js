@@ -21,6 +21,13 @@ useEffect(() => {
   }
   prevLength.current = chat.length;
 }, [chat]);
+
+useEffect(() => {
+  if (isLoggedIn) {
+    fetchHistory();
+  }
+}, [isLoggedIn]);
+
 useEffect(() => {
   const loadHistory = async () => {
     try {
@@ -64,7 +71,7 @@ useEffect(() => {
       headers: {
         "Content-Type": "application/json",
       },
-      credentials: "include",
+      // credentials: "include",
       body: JSON.stringify({ message }),
     });
 
@@ -84,7 +91,7 @@ useEffect(() => {
 const Logout = async () => {
   await fetch(" https://ai-agent-backend-1-d43j.onrender.com/api/auth/logout", {
     method: "POST",
-    credentials: "include",
+    // credentials: "include",
   });
 
   setIsLoggedIn(false);

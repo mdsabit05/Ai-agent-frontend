@@ -7,12 +7,12 @@ function Signup({ setIsLoggedIn }) {
 
   const signup = async () => {
 
-    const res = await fetch(" https://ai-agent-backend-1-d43j.onrender.com/api/auth/sign-up/email", {
+  const res = await fetch(" https://ai-agent-backend-1-d43j.onrender.com/api/auth/sign-up/email", {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
   },
-  credentials: "include",
+  // credentials: "include",
   body: JSON.stringify({
     email,
     password,
