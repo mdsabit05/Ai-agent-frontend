@@ -24,7 +24,7 @@ useEffect(() => {
 useEffect(() => {
   const loadHistory = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/history", {
+      const res = await fetch(" https://ai-agent-backend-1-d43j.onrender.com/api/history", {
         credentials: "include",
       });
 
@@ -59,7 +59,7 @@ useEffect(() => {
   setMessage("");
 
   try {
-    const res = await fetch("http://localhost:5000/api/chat", {
+    const res = await fetch(" https://ai-agent-backend-1-d43j.onrender.com/api/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -82,7 +82,7 @@ useEffect(() => {
 };
 
 const Logout = async () => {
-  await fetch("http://localhost:5000/api/auth/logout", {
+  await fetch(" https://ai-agent-backend-1-d43j.onrender.com/api/auth/logout", {
     method: "POST",
     credentials: "include",
   });
