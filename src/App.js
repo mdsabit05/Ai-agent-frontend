@@ -118,7 +118,7 @@ return (
   <h1>  AI Chat Agent</h1>
    <div className="headerBtn">
      <button className="logout" onClick={Logout}>Logout</button>
-   <a href="#"><button className="logout">Setting</button></a></div> 
+   <a href="/"><button className="logout">Setting</button></a></div> 
   </header>
 
   <div className="chat-container">

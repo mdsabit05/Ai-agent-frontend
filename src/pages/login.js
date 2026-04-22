@@ -1,5 +1,4 @@
 import React , {useState} from "react";
-import signUp from "./signup";
 
 function Login ({ setIsLoggedIn }) {
 
