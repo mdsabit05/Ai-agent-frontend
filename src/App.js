@@ -22,11 +22,6 @@ useEffect(() => {
   prevLength.current = chat.length;
 }, [chat]);
 
-useEffect(() => {
-  if (isLoggedIn) {
-    fetchHistory();
-  }
-}, [isLoggedIn]);
 
 useEffect(() => {
   const loadHistory = async () => {
@@ -52,6 +47,13 @@ useEffect(() => {
 
   loadHistory();
 }, []);
+
+useEffect(() => {
+  if (isLoggedIn) {
+    loadHistory();
+  }
+}, [isLoggedIn]);
+
 
 
   const sendMsg = async () => {
