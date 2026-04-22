@@ -48,12 +48,6 @@ useEffect(() => {
   loadHistory();
 }, []);
 
-useEffect(() => {
-  if (isLoggedIn) {
-    loadHistory();
-  }
-}, [isLoggedIn]);
-
 
 
   const sendMsg = async () => {
